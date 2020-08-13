@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CRUD - By El-Sman</title>
+    <!--meta-->
+    <meta charset="UTF-8">
+    <meta name="description" content="CRUD By El-Sman">
+    <meta name="keywords" content="Add, Create ,Delete ,Update">
+    <meta name="author" content="El-Sman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon.png">
+    <!--links-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--scripts-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <section class="CRUD container py-5">
+        <h1 class="text-center">Javascript CRUD</h1>
+        <form class="py-3" method="POST">
+            <div class="form-group">
+                <label for="productName">Product Name :</label>
+                <input required type="text" class="form-control" id="productName"
+                    placeholder="Must be between 3 - 15 letters and start by uppercase letter">
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Product Price :</label>
+                <input required type="text" class="form-control" id="productPrice" placeholder="Must be integer">
+            </div>
+            <div class="form-group">
+                <label for="productCategory">Product Category :</label>
+                <input type="text" class="form-control" id="productCategory"
+                    placeholder="Must be in form (type-modelNumber)">
+            </div>
+            <div class="form-group">
+                <label>Payment method </label>
+                <select id="paymentMethod">
+                    <option value="cash">Cash</option>
+                    <option value="credit cards">Credit Cards</option>
+                    <option value="prepaid cards">Prepaid Cards</option>
+                    <option value="bank transfers">Bank Transfers</option>
+                </select>
+                <br />
+            </div>
+            <div class="form-group">
+                <label>Sale</label>
+                <input type="radio" name="sale" value="true">
+                <label class="ml-3">No sale</label>
+                <input type="radio" name="sale" value="false" checked>
+            </div>
+            <div class="form-group">
+                <label for="productDiscussion">Product discussion :</label>
+                <textarea type="text" class="form-control" id="productDiscussion" placeholder="Enter product discussion"
+                    style="resize: none;"></textarea>
+            </div>
+            <div id="button" class="pt-3 text-right"></div>
+        </form>
+        <div class="container py-3">
+            <h3 class="text-center my-4">Our Products</h3>
+            <input onkeyup="searchProducts(this.value)" class="form-control w-50 m-auto"
+                placeholder="Enter product name">
+        </div>
+        <div class="container py-4">
+            <div class="row" id="products"></div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

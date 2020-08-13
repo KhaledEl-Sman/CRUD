@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'segoe ui light';
+}
+
+.product {
+    position: relative;
+}
+
+.sale {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: #fff;
+    background-color: tomato;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-body h2 {
+    font-size: 22px;
+}
+
+.card-body p {
+    margin: 0;
+    padding: .3rem 0;
+}
